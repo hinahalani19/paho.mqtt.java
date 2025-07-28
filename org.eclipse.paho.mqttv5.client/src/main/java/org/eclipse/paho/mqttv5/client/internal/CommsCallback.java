@@ -639,6 +639,7 @@ public class CommsCallback implements Runnable {
 				// Just log the fact that an exception was thrown
 				// @TRACE 725=Ignoring Exception thrown from messageArrived: {0}
 				log.fine(CLASS_NAME, methodName, "725", new Object[] { ex });
+				throw ex;
 			}
 			delivered = true;
 		}
